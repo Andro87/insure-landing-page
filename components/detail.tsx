@@ -11,7 +11,7 @@ const Detail: React.FunctionComponent<Props> = props => {
     return (
         <div className={styles.detail}>
             {icon}
-            <h4>{header}</h4> <p>{paragraph}</p>
+            <h3>{header}</h3> <p>{paragraph}</p>
         </div>
     );
 };

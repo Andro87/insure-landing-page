@@ -223,7 +223,6 @@
     @media screen and (min-width: $desktop) {
         width: 77%;
         align-items: flex-start;
-
         text-align: start;
     }
     &:before {
@@ -231,7 +230,7 @@
         position: absolute;
         height: 1px;
         width: 150px;
-        background-color: var(--Pink);
+        background-color: hsla(0, 0%, 86%, 1);
     }
     h2 {
         margin-top: 40px;
@@ -353,7 +352,9 @@
 }
 
 .hr_line {
-    background: var(--LightGrey);
+    border: none;
+    background: hsla(0, 0%, 86%, 1);
+    height: 1px;
     width: 100%;
     @media screen and (min-width: $desktop) {
         position: absolute;
