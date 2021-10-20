@@ -1,0 +1,402 @@
+@import "./variables.scss";
+.main_container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.header {
+    width: 100%;
+    padding: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+
+    @media screen and (min-width: $tablet) {
+        padding: 20px;
+    }
+    @media screen and (min-width: $desktop) {
+        padding: 20px 0;
+        width: 77%;
+    }
+}
+.btn_menu {
+    display: flex;
+    border: none;
+    @media screen and (min-width: $tablet) {
+        display: none;
+    }
+}
+
+.navigation {
+    display: none;
+
+    @media screen and (min-width: $tablet) {
+        display: flex;
+        align-items: center;
+    }
+    a {
+        text-decoration: none;
+        font-family: "karla";
+        font-weight: 700;
+        font-size: 1.25rem;
+        color: var(--White);
+        margin-bottom: 24px;
+        letter-spacing: 1.5px;
+        transition: all 0.4s ease-in-out;
+        @media screen and (min-width: $tablet) {
+            font-size: 0.82rem;
+            color: var(--Grey);
+            margin-bottom: 0;
+            margin-right: 25px;
+        }
+        &:hover {
+            cursor: pointer;
+            color: var(--Black);
+        }
+    }
+}
+.navigation_mobile {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 3;
+    padding: 40px 24px 300px;
+    background: url("../public/images/bg-pattern-mobile-nav.svg") bottom,
+        var(--Blue);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    button {
+        width: 100%;
+    }
+    @media screen and (min-width: $tablet) {
+        display: none;
+    }
+}
+.main {
+    width: 100%;
+    background: var(--Blue);
+
+    @media screen and (min-width: $desktop) {
+        display: flex;
+        justify-content: center;
+        position: relative;
+        padding: 100px 0 50px;
+    }
+    @media screen and (min-width: $bigger) {
+        padding: 110px 0 130px;
+    }
+    &::before {
+        display: none;
+        @media screen and (min-width: $desktop) {
+            display: initial;
+            content: url(../public/images/bg-pattern-intro-left-desktop.svg);
+            position: absolute;
+            bottom: -350px;
+            left: 0;
+        }
+    }
+}
+
+.background_container {
+    display: none;
+    @media screen and (min-width: $desktop) {
+        display: initial;
+        position: absolute;
+        z-index: 3;
+        width: 50%;
+        height: 100%;
+        top: 0;
+        right: 0;
+        overflow: hidden;
+    }
+    &::after {
+        display: none;
+
+        @media screen and (min-width: $desktop) {
+            display: initial;
+            content: url(../public/images/bg-pattern-intro-right-desktop.svg);
+            position: absolute;
+            top: -80px;
+            right: 0;
+        }
+    }
+}
+
+.main_wrap {
+    display: flex;
+    flex-direction: column;
+
+    @media screen and (min-width: $desktop) {
+        flex-direction: row;
+        position: relative;
+        width: 77%;
+    }
+}
+
+.main_img {
+    display: flex;
+    width: 100%;
+    @media screen and (min-width: $desktop) {
+        width: 50%;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    img {
+        width: 100%;
+    }
+}
+.main_info {
+    text-align: center;
+    padding: 93px 24px;
+    position: relative;
+    color: var(--White);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @media screen and (min-width: $desktop) {
+        align-items: flex-start;
+        text-align: start;
+        width: 50%;
+        max-width: 540px;
+        padding: 60px 20px 0 0;
+    }
+    h1,
+    p {
+        max-width: 540px;
+        @media screen and (min-width: $desktop) {
+            max-width: initial;
+        }
+    }
+    h1 {
+        color: var(--White);
+    }
+    p {
+        margin-top: 16px;
+        margin-bottom: 32px;
+        @media screen and (min-width: $desktop) {
+            margin-bottom: 24px;
+        }
+    }
+
+    &::before {
+        content: url(../public/images/bg-pattern-intro-left-mobile.svg);
+        position: absolute;
+        top: 0;
+        left: 0;
+        @media screen and (min-width: $desktop) {
+            content: "";
+            position: absolute;
+            height: 1px;
+            width: 150px;
+            background-color: var(--White);
+        }
+    }
+
+    &::after {
+        content: url(../public/images/bg-pattern-intro-right-mobile.svg);
+        position: absolute;
+        bottom: -200px;
+        right: 0;
+        @media screen and (min-width: $desktop) {
+            display: none;
+        }
+    }
+}
+.section_details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 140px 24px 0;
+    position: relative;
+    text-align: center;
+    @media screen and (min-width: $tablet) {
+        padding: 0;
+        margin-top: 300px;
+    }
+    @media screen and (min-width: $desktop) {
+        width: 77%;
+        align-items: flex-start;
+
+        text-align: start;
+    }
+    &:before {
+        content: "";
+        position: absolute;
+        height: 1px;
+        width: 150px;
+        background-color: var(--Pink);
+    }
+    h2 {
+        margin-top: 40px;
+        margin-bottom: 80px;
+        @media screen and (min-width: $desktop) {
+            margin-top: 65px;
+            margin-bottom: 96px;
+        }
+    }
+}
+.container_details {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 56px;
+
+    @media screen and (min-width: $desktop) {
+        grid-template-columns: repeat(3, 1fr);
+        row-gap: 0;
+        column-gap: 30px;
+    }
+}
+.section_more {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 140px 24px;
+    @media screen and (min-width: $tablet) {
+        max-width: 500px;
+        padding: 160px 0 150px;
+    }
+
+    @media screen and (min-width: $desktop) {
+        max-width: initial;
+    }
+}
+.container_more {
+    background: url("../public/images/bg-pattern-how-we-work-mobile.svg") top
+            right,
+        var(--Blue);
+    background-repeat: no-repeat;
+    text-align: center;
+    padding: 72px 24px;
+    @media screen and (min-width: $desktop) {
+        width: 77%;
+
+        background: url("../public/images/bg-pattern-how-we-work-desktop.svg")
+                top right,
+            var(--Blue);
+        background-repeat: no-repeat;
+        text-align: initial;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 69px 80px;
+    }
+    h3 {
+        color: var(--White);
+        margin-bottom: 40px;
+        @media screen and (min-width: $desktop) {
+            max-width: 500px;
+            margin-bottom: 0;
+        }
+    }
+}
+.footer {
+    width: 100%;
+    background: url("../public/images/bg-pattern-footer-mobile.svg") top left,
+        var(--LightGrey);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    padding: 88px 24px;
+    display: flex;
+    justify-content: center;
+    @media screen and (min-width: $desktop) {
+        padding: 64px 0;
+        background: url("../public/images/bg-pattern-footer-desktop.svg") top
+                left,
+            var(--LightGrey);
+        background-repeat: no-repeat;
+    }
+}
+.footer_container {
+    @media screen and (min-width: $desktop) {
+        width: 77%;
+    }
+}
+.icons_wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @media screen and (min-width: $desktop) {
+        flex-direction: row;
+        justify-content: space-between;
+        position: relative;
+        padding-bottom: 33px;
+    }
+}
+.social_wrap {
+    margin-top: 32px;
+    margin-bottom: 40px;
+    width: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @media screen and (min-width: $desktop) {
+        margin: 0;
+    }
+    svg {
+        &:hover {
+            cursor: pointer;
+            path {
+                fill: var(--Black);
+            }
+        }
+    }
+}
+
+.hr_line {
+    background: var(--LightGrey);
+    width: 100%;
+    @media screen and (min-width: $desktop) {
+        position: absolute;
+        bottom: 0;
+    }
+}
+.container_link {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 40px;
+    margin-top: 40px;
+    @media screen and (min-width: $desktop) {
+        grid-template-columns: repeat(4, 1fr);
+        row-gap: 0;
+        column-gap: 30px;
+        margin-top: 48px;
+    }
+}
+.link_box {
+    text-transform: uppercase;
+    font-family: "karla";
+    font-weight: 700;
+    font-size: 0.82rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s ease-in-out;
+    @media screen and (min-width: $desktop) {
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+    p {
+        color: var(--Grey);
+        margin-bottom: 36px;
+        font-weight: 700;
+    }
+    a {
+        text-decoration: none;
+        color: var(--Blue);
+        margin-bottom: 16px;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}

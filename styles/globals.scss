@@ -1,0 +1,86 @@
+@import "./variables.scss";
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+@font-face {
+    font-family: "karla";
+    src: url("../public/fonts/Karla-Bold.ttf");
+    font-family: 700;
+}
+@font-face {
+    font-family: "karla";
+    src: url("../public/fonts/Karla-Regular.ttf");
+    font-family: 400;
+}
+@font-face {
+    font-family: "dm";
+    src: url("../public/fonts/DMSerifDisplay-Regular.ttf");
+    font-family: 400;
+}
+:root {
+    --Black: hsla(271, 9%, 17%, 1);
+    --Grey: hsla(271, 5%, 51%, 1);
+    --Blue: hsla(256, 26%, 20%, 1);
+    --LightBlue: hsla(215, 30%, 68%, 1);
+    --White: hsla(0, 0%, 100%, 1);
+    --LightGrey: hsla(0, 0%, 98%, 1);
+    --Pink: hsla(296, 30%, 68%, 1);
+}
+
+html {
+    font-size: 16px;
+}
+h1,
+h2,
+h3,
+h4 {
+    font-family: "dm";
+    font-weight: 400;
+    color: var(--Black);
+}
+h1 {
+    font-size: 3rem;
+    line-height: 3rem;
+    @media screen and (min-width: $tablet) {
+        line-height: 4rem;
+        font-size: 4.5rem;
+    }
+    @media screen and (max-width: $smaller) {
+        font-size: 2rem;
+    }
+}
+h2 {
+    font-size: 3rem;
+    line-height: 3rem;
+    @media screen and (min-width: $tablet) {
+        font-size: 4.5rem;
+        line-height: 4rem;
+    }
+    @media screen and (max-width: $smaller) {
+        font-size: 2rem;
+    }
+}
+
+h3 {
+    font-size: 2.5rem;
+    line-height: 2.5rem;
+    @media screen and (min-width: $tablet) {
+        font-size: 3.5rem;
+        line-height: 3.5rem;
+        @media screen and (max-width: $smaller) {
+            font-size: 1.7rem;
+        }
+    }
+}
+h4 {
+    font-size: 1.75rem;
+    line-height: 3.5rem;
+}
+p {
+    font-family: "karla";
+    font-size: 1rem;
+    font-weight: 400;
+}
